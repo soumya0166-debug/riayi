@@ -1,0 +1,130 @@
+/* RIYAI Settings Modal and Views */
+
+.settings-container {
+  display: flex;
+  height: 520px;
+  max-height: 80vh;
+}
+
+.settings-sidebar {
+  width: 180px;
+  border-right: 1px solid var(--border-subtle);
+  padding: var(--spacing-4) var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  flex-shrink: 0;
+}
+
+.settings-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-align: left;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.settings-tab-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.settings-tab-btn.active {
+  background-color: var(--riyai-accent-subtle);
+  color: var(--riyai-accent);
+}
+
+.settings-content-area {
+  flex: 1;
+  padding: var(--spacing-6);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.settings-section-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  padding: var(--spacing-3) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-item-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.settings-item-desc {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.settings-badge-unsupported {
+  font-size: 0.65rem;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .settings-container {
+    flex-direction: column;
+    height: auto;
+    max-height: 80vh;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--spacing-2);
+    gap: var(--spacing-2);
+  }
+
+  .settings-tab-btn {
+    white-space: nowrap;
+    padding: 0.4rem 0.6rem;
+    font-size: var(--font-size-xs);
+  }
+
+  .settings-content-area {
+    padding: var(--spacing-4);
+  }
+
+  .settings-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+}
+

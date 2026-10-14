@@ -1,0 +1,24 @@
+{
+  "id": "ds_1791558520096_6a837d",
+  "name": "OpenMathReasoning Benchmark (Held-Out Evaluated)",
+  "description": "Curated mathematical reasoning split from MontenTech/OpenMathReasoning (CC-BY-4.0). Includes 280 training samples, 35 validation samples, and 35 strictly held-out test samples with step-by-step reasoning.",
+  "taskType": "reasoning",
+  "format": "chat",
+  "version": 1,
+  "recordCount": 350,
+  "stats": {
+    "totalRecords": 350,
+    "trainRecords": 280,
+    "valRecords": 35,
+    "testRecords": 35,
+    "duplicatesRemoved": 0,
+    "missingFieldsCount": 0,
+    "avgLengthChars": 0,
+    "totalTokensEst": 1905408
+  },
+  "source": "imported_math",
+  "originalFileName": "OpenMathReasoning_cot_split.jsonl",
+  "fileSizeBytes": 15905649,
+  "createdAt": "2026-10-09T15:08:40.209Z",
+  "updatedAt": "2026-10-09T15:08:40.209Z"
+}

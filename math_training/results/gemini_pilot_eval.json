@@ -1,0 +1,73 @@
+{
+  "total_evaluated": 5,
+  "correct": 3,
+  "incorrect": 2,
+  "accuracy_pct": 60.0,
+  "unreliable_auto_compare_count": 1,
+  "errors": 0,
+  "total_time_sec": 71.53,
+  "avg_time_per_sample_sec": 14.31,
+  "tokens_per_sec_est": 15.6,
+  "results": [
+    {
+      "index": 1,
+      "id": "omr_cot_1378b257a03d3505",
+      "problem": "In trapezoid \\(ABCD\\) with bases \\(AD\\) and \\(BC\\), points \\(K\\) and \\(L\\) are taken on sides \\(AB\\) and \\(CD\\) respectively. Given that \\(\\angle BAL = \\angle CDK\\), calculate the value of \\(\\angle BLA + \\angle CKD\\).",
+      "expected_answer": "180^\\circ",
+      "model_raw_output": "BAL\\) is the angle in \\(\\triangle BAL\\).\nYes, the angle at vertex \\(A\\) in \\(\\triangle BAL\\).\nIs it \\(\\angle BAL\\)? Yes, the angle between \\(AB\\) and \\(AL\\).\nWait, \\(AB\\) is the side of the trapezoid.\nIs \\(L\\) on \\(CD\\)? Yes, \\(L(2,1)\\) is on \\(CD\\).\nSo \\(\\angle BAL\\) is indeed the angle between \\(AB\\) and \\(AL\\).\nAnd \\(\\angle CDK\\) is the angle between \\(CD\\) and \\(DK\\).\nSince \\(K(0,1)\\) is on \\(AB\\), \\(\\angle CDK\\) is the angle between \\(CD\\) and \\(DK",
+      "extracted_answer": null,
+      "is_correct": false,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "No answer could be extracted from model output",
+      "latency_sec": 16.83
+    },
+    {
+      "index": 2,
+      "id": "omr_cot_23ae31802645b811",
+      "problem": "Suppose \\( S_{1}, \\ldots, S_{k} \\) are distinct subsets of \\( \\{ 1, 2, \\ldots, n \\} \\) and that for any two of them \\( |S_{i} \\cup S_{j}| \\le n-4 \\) holds. Find the maximal possible value of \\( k \\).",
+      "expected_answer": "2^{n-4}",
+      "model_raw_output": "n+t = 10$ (even).\n$g(6, 4) = \\sum_{i=5}^6 \\binom{6}{i} = 6 + 1 = 7$.\nLet's check if we can have 7 subsets for $n=6$.\n$|S_i \\cup S_j| \\le 2$.\nThis means $S_i^c \\cap S_j^c \\ge 4$.\nIf we take $S_i$ to be:\n- $\\emptyset$ (1 subset)\n- All singletons: $\\{1\\}, \\{2\\}, \\{3\\}, \\{4\\}, \\{5\\}, \\{6\\}$ (6 subsets).\nTotal 7 subsets.\nAny two of",
+      "extracted_answer": "Total 7 subsets.",
+      "is_correct": false,
+      "is_reliable_auto_compare": false,
+      "comparison_rationale": "Symbolic expression requires manual review (pred: 'Total 7 subsets', exp: '2^{n-4}')",
+      "latency_sec": 18.09
+    },
+    {
+      "index": 3,
+      "id": "omr_cot_f7acf1aa58dad9bf",
+      "problem": "If the lengths of the legs of a right triangle are 5 and 12, what is the length of the hypotenuse?",
+      "expected_answer": "13",
+      "model_raw_output": "To find the length of the hypotenuse of a right triangle, we can use the Pythagorean theorem:\n\n$$a^2 + b^2 = c^2$$\n\nwhere $a$ and $b$ are the lengths of the legs, and $c$ is the length of the hypotenuse.\n\nGiven:\n* $a = 5$\n* $b = 12$\n\nSubstitute these values into the formula:\n\n$$5^2 + 12^2 = c^2$$\n$$25 + 144 = c^2$$\n$$169 = c^2$$\n\nTo find $c$, take the square root of both sides:\n\n$$c = \\sqrt{169}$$\n$$c = 13$$\n\nThus, the length of the hypotenuse is 13.\n\nAn alternate way to solve this is to recognize that 5, 12, and 13 form a well-known Pythagorean triple (5-12-13).\n\nBoxed final answer:\n\\boxed{13}",
+      "extracted_answer": "13",
+      "is_correct": true,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Exact normalized string match",
+      "latency_sec": 2.65
+    },
+    {
+      "index": 4,
+      "id": "omr_cot_3d4381668d7c420b",
+      "problem": "Given the sequence \\(a_{n+1} = \\frac{a_{n-1}}{1+na_{n-1}a_n}\\) with initial conditions \\(a_0 = a_1 = 1\\), find the value of \\(\\frac{1}{a_{199}a_{200}}\\).",
+      "expected_answer": "19901",
+      "model_raw_output": "To find the value of \\(\\frac{1}{a_{199}a_{200}}\\), we can analyze the given recurrence relation:\n\\[ a_{n+1} = \\frac{a_{n-1}}{1+na_{n-1}a_n} \\]\nwith initial conditions \\(a_0 = a_1 = 1\\).\n\nLet's define a new sequence \\(x_n = \\frac{1}{a_n a_{n+1}}\\). We want to find the value of \\(x_{199} = \\frac{1}{a_{199}a_{200}}\\).\n\nWe can rewrite the recurrence relation by multiplying both sides by \\(a_n\\):\n\\[ a_n a_{n+1} = \\frac{a_{n-1} a_n}{1 + n a_{n-1} a_n} \\]\n\nTaking the reciprocal of both sides, we get:\n\\[ \\frac{1}{a_n a_{n+1}} = \\frac{1 + n a_{n-1} a_n}{a_{n-1} a_n} = \\frac{1}{a_{n-1} a_n} + n \\]\n\nSubstituting \\(x_n = \\frac{1}{a_n a_{n+1}}\\) into this equation yields:\n\\[ x_n = x_{n-1} + n \\]\n\nWe can find the initial term \\(x_0\\):\n\\[ x_0 = \\frac{1}{a_0 a_1} = \\frac{1}{1 \\cdot 1} = 1 \\]\n\nUsing the recurrence relation for \\(x_n\\), we can express \\(x_n\\) as a summation:\n\\[ x_n = x_0 + \\sum_{i=1}^n i = 1 + \\frac{n(n+1)}{2} \\]\n\nWe want to find \\(x_{199}\\):\n\\[ x_{199} = 1 + \\frac{199 \\cdot 200}{2} \\]\n\\[ x_{199} = 1 + 199 \\cdot 100 \\]\n\\[ x_{199} = 1 + 19900 = 19901 \\]\n\nThus, the value of \\(\\frac{1}{a_{199}a_{200}}\\) is \\(19901\\).\n\n\\boxed{19901}",
+      "extracted_answer": "19901",
+      "is_correct": true,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Exact normalized string match",
+      "latency_sec": 8.05
+    },
+    {
+      "index": 5,
+      "id": "omr_cot_251322c46ee753df",
+      "problem": "Evaluate the integral \\( \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx \\).",
+      "expected_answer": "-\\dfrac{\\pi^2}{8} \\ln 2",
+      "model_raw_output": "To evaluate the integral \n\\[ I = \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx \\]\n\nwe can use the substitution \\( u = \\frac{\\pi}{2} - x \\). Under this substitution:\n- \\( dx = -du \\)\n- When \\( x = 0 \\), \\( u = \\frac{\\pi}{2} \\)\n- When \\( x = \\frac{\\pi}{2} \\), \\( u = 0 \\)\n- The argument of the sine function becomes \\( 2x = 2\\left(\\frac{\\pi}{2} - u\\right) = \\pi - 2u \\). Since \\( \\sin(\\pi - 2u) = \\sin(2u) \\), we have:\n\n\\[ I = \\int_{\\frac{\\pi}{2}}^0 \\left(\\frac{\\pi}{2} - u\\right) \\ln(\\sin(\\pi - 2u)) \\, (-du) \\]\n\\[ I = \\int_0^{\\frac{\\pi}{2}} \\left(\\frac{\\pi}{2} - u\\right) \\ln(\\sin(2u)) \\, du \\]\n\nSince \\( u \\) is a dummy variable, we can rewrite this as:\n\\[ I = \\int_0^{\\frac{\\pi}{2}} \\left(\\frac{\\pi}{2} - x\\right) \\ln(\\sin(2x)) \\, dx \\]\n\nNow, we add the two expressions for \\( I \\):\n\\[ 2I = \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx + \\int_0^{\\frac{\\pi}{2}} \\left(\\frac{\\pi}{2} - x\\right) \\ln(\\sin(2x)) \\, dx \\]\n\\[ 2I = \\int_0^{\\frac{\\pi}{2}} \\left( x + \\frac{\\pi}{2} - x \\right) \\ln(\\sin(2x)) \\, dx \\]\n\\[ 2I = \\frac{\\pi}{2} \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(2x)) \\, dx \\]\n\\[ I = \\frac{\\pi}{4} \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(2x)) \\, dx \\]\n\nTo evaluate the remaining integral, let \\( J = \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(2x)) \\, dx \\). We use the substitution \\( t = 2x \\), which gives \\( dt = 2 \\, dx \\):\n\\[ J = \\frac{1}{2} \\int_0^{\\pi} \\ln(\\sin(t)) \\, dt \\]\n\nUsing the symmetry of the sine function about \\( t = \\frac{\\pi}{2} \\), we have:\n\\[ \\int_0^{\\pi} \\ln(\\sin(t)) \\, dt = 2 \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(t)) \\, dt \\]\n\nThus,\n\\[ J = \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(t)) \\, dt \\]\n\nUsing the standard integral value \\( \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin(t)) \\, dt = -\\frac{\\pi}{2} \\ln(2) \\), we get:\n\\[ J = -\\frac{\\pi}{2} \\ln(2) \\]\n\nSubstituting \\( J \\) back into the expression for \\( I \\):\n\\[ I = \\frac{\\pi}{4} \\left( -\\frac{\\pi}{2} \\ln(2) \\right) = -\\frac{\\pi^2}{8} \\ln(2) \\]\n\nThe final answer is:\n\\[ \\boxed{-\\frac{\\pi^2}{8} \\ln(2)} \\]",
+      "extracted_answer": "-\\frac{\\pi^2}{8} \\ln(2)",
+      "is_correct": true,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Alphanumeric match",
+      "latency_sec": 25.91
+    }
+  ]
+}

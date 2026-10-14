@@ -1,0 +1,56 @@
+export const siteConfig = {
+  name: 'RIYAI',
+  tagline: 'Your intelligent companion.',
+  description: 'A modern, high-performance personal AI assistant platform built for clarity, precision, and privacy.',
+  url: 'https://riyai.ai',
+  author: 'RIYAI Engineering',
+  version: '1.0.0-phase1',
+  links: {
+    docs: '/docs',
+    github: 'https://github.com',
+  },
+  starterPrompts: [
+    {
+      id: 'concept',
+      title: 'Explain a difficult concept',
+      prompt: 'Explain the intuition behind quantum entanglement using simple, everyday analogies.',
+      icon: 'HelpCircle',
+      category: 'Learning',
+    },
+    {
+      id: 'build',
+      title: 'Help me build something',
+      prompt: 'Design a clean, fault-tolerant background queue processing worker in TypeScript.',
+      icon: 'Code2',
+      category: 'Coding',
+    },
+    {
+      id: 'analyze',
+      title: 'Analyze a document',
+      prompt: 'Extract the core value propositions, target market, and structural risks from this executive summary.',
+      icon: 'FileText',
+      category: 'Analysis',
+    },
+    {
+      id: 'brainstorm',
+      title: 'Brainstorm an idea',
+      prompt: 'Brainstorm 5 innovative product features for a privacy-first personal knowledge assistant.',
+      icon: 'Lightbulb',
+      category: 'Ideation',
+    },
+    {
+      id: 'write',
+      title: 'Write something',
+      prompt: 'Draft an engaging, high-clarity release announcement highlighting our v1.0 architecture.',
+      icon: 'PenTool',
+      category: 'Writing',
+    },
+    {
+      id: 'solve',
+      title: 'Solve a problem',
+      prompt: 'Provide a structured decision matrix comparing serverless vs containerized microservices for high throughput.',
+      icon: 'Sparkles',
+      category: 'Strategy',
+    },
+  ],
+};

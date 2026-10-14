@@ -1,0 +1,73 @@
+{
+  "total_evaluated": 5,
+  "correct": 2,
+  "incorrect": 3,
+  "accuracy_pct": 40.0,
+  "unreliable_auto_compare_count": 2,
+  "errors": 0,
+  "total_time_sec": 121.34,
+  "avg_time_per_sample_sec": 24.27,
+  "tokens_per_sec_est": 16.8,
+  "results": [
+    {
+      "index": 1,
+      "id": "omr_cot_1378b257a03d3505",
+      "problem": "In trapezoid \\(ABCD\\) with bases \\(AD\\) and \\(BC\\), points \\(K\\) and \\(L\\) are taken on sides \\(AB\\) and \\(CD\\) respectively. Given that \\(\\angle BAL = \\angle CDK\\), calculate the value of \\(\\angle BLA + \\angle CKD\\).",
+      "expected_answer": "180^\\circ",
+      "model_raw_output": "To solve the problem, we need to analyze the given information and use geometric properties to find the required angle sum.\n\n1. **Identify the given information:**\n   - Trapezoid \\(ABCD\\) with bases \\(AD\\) and \\(BC\\).\n   - Points \\(K\\) and \\(L\\) are taken on sides \\(AB\\) and \\(CD\\) respectively.\n   - \\(\\angle BAL = \\angle CDK\\).\n\n2. **Understand the geometric configuration:**\n   - Since \\(K\\) and \\(L\\) are on \\(AB\\) and \\(CD\\) respectively, and \\(\\angle BAL = \\angle CDK\\), we can infer that \\(K\\) and \\(L\\) are symmetric with respect to the line \\(AB\\). This is because the angles \\(\\angle BAL\\) and \\(\\angle CDK\\) are equal, and since \\(K\\) and \\(L\\) are symmetric with respect to \\(AB\\), the angles \\(\\angle BAL\\) and \\(\\angle CDK\\) must be equal.\n\n3. **Determine the angle sum:**\n   - Since \\(\\angle BAL = \\angle CDK\\), and \\(\\angle BAL\\) and \\(\\angle CDK\\) are equal, the angles \\(\\angle BLA\\) and \\(\\angle BKL\\) are equal because they are adjacent angles formed by the intersection of the diagonals of the trapezoid.\n   - Similarly, \\(\\angle CKD\\) and \\(\\angle CLD\\) are equal because they are adjacent angles formed by the intersection of the diagonals of the trapezoid.\n   - Therefore, \\(\\angle BLA + \\angle CKD = \\angle BKL + \\angle CLD = 180^\\circ\\).\n\n4. **Conclusion:**\n   - The value of \\(\\angle BLA + \\angle CKD\\) is \\(180^\\circ\\).\n\nThus, the final answer is \\(\\boxed{180^\\circ}\\).",
+      "extracted_answer": "180^\\circ",
+      "is_correct": true,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Exact normalized string match",
+      "latency_sec": 16.78
+    },
+    {
+      "index": 2,
+      "id": "omr_cot_23ae31802645b811",
+      "problem": "Suppose \\( S_{1}, \\ldots, S_{k} \\) are distinct subsets of \\( \\{ 1, 2, \\ldots, n \\} \\) and that for any two of them \\( |S_{i} \\cup S_{j}| \\le n-4 \\) holds. Find the maximal possible value of \\( k \\).",
+      "expected_answer": "2^{n-4}",
+      "model_raw_output": "To find the maximal possible value of \\( k \\) such that for any two subsets \\( S_i \\) and \\( S_j \\) of \\( \\{ 1, 2, \\ldots, n \\} \\), the condition \\( |S_i \\cup S_j| \\le n-4 \\) holds, we need to analyze the constraints and properties of the subsets.\n\nFirst, let's consider the simplest case where \\( n = 4 \\). We need to find the maximum number of subsets \\( S_1, S_2, \\ldots, S_4 \\) such that for any two subsets \\( S_i \\) and \\( S_j \\), the union \\( S_i \\cup S_j \\) has at most 2 elements. This is because if \\( S_i \\cup S_j \\) had more than 2 elements, we could find a subset \\( S_k \\) such that \\( S_i \\cup S_j \\cup S_k \\) has more than 2 elements, which would violate the condition \\( |S_i \\cup S_j| \\le n-4 \\).\n\nLet's construct such subsets. Consider the subsets \\( S_1 = \\{1, 2\\} \\), \\( S_2 = \\{1, 3\\} \\), \\( S_3 = \\{1, 4\\} \\), and \\( S_4 = \\{2, 3, 4\\} \\). We can see that:\n- \\( S_1 \\cup S_2 = \\{1, 2\\} \\)\n- \\( S_1 \\cup S_3 = \\{1, 2, 3\\} \\)\n- \\( S_1 \\cup S_4 = \\{1, 2, 3, 4\\} \\)\n- \\( S_2 \\cup S_3 = \\{1, 2, 4\\} \\)\n- \\( S_2 \\cup S_4 = \\{1, 2, 3, 4\\} \\)\n- \\( S_3 \\cup S_4 = \\{1, 2, 3, 4\\} \\)\n\nIn this case, we have 4 subsets, and for any two of them, the union will have at most 2 elements. Therefore, the maximal possible value of \\( k \\) is 4.\n\nTo confirm that 4 is indeed the maximum, we can consider the case where \\( n = 5 \\). If we have 5 subsets, we can use the same construction as above. For example, we can have:\n- \\( S_1 = \\{1, 2, 3, 4, 5\\} \\)\n- \\( S_2 = \\{1, 2, 3, 5, 6\\} \\)\n- \\( S_3 = \\{1, 2, 4, 5, 6\\} \\)\n- \\( S_4 = \\{1, 2, 3, 4, 5, 6\\} \\)\n- \\( S_5 = \\{1, 2, 3, 4, 5, 6\\} \\)\n\nIn this case, we have 5 subsets, and for any two of them, the union will have at most 2 elements. Therefore, the maximal possible value of \\( k \\) is 5.\n\nThus, the maximal possible value of \\( k \\) is \\(\\boxed{5}\\).",
+      "extracted_answer": "5",
+      "is_correct": false,
+      "is_reliable_auto_compare": false,
+      "comparison_rationale": "Symbolic expression requires manual review (pred: '5', exp: '2^{n-4}')",
+      "latency_sec": 27.32
+    },
+    {
+      "index": 3,
+      "id": "omr_cot_f7acf1aa58dad9bf",
+      "problem": "If the lengths of the legs of a right triangle are 5 and 12, what is the length of the hypotenuse?",
+      "expected_answer": "13",
+      "model_raw_output": "To find the length of the hypotenuse of a right triangle with legs of lengths 5 and 12, we can use the Pythagorean theorem. The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. This can be written as:\n\n\\[ c^2 = a^2 + b^2 \\]\n\nwhere \\( c \\) is the length of the hypotenuse, and \\( a \\) and \\( b \\) are the lengths of the other two sides. In this problem, the lengths of the legs are 5 and 12. So, we can substitute \\( a = 5 \\) and \\( b = 12 \\) into the formula:\n\n\\[ c^2 = 5^2 + 12^2 \\]\n\nFirst, we calculate the squares of the legs:\n\n\\[ 5^2 = 25 \\]\n\\[ 12^2 = 144 \\]\n\nNext, we add these two values together:\n\n\\[ c^2 = 25 + 144 = 169 \\]\n\nTo find \\( c \\), we take the square root of both sides of the equation:\n\n\\[ c = \\sqrt{169} = 13 \\]\n\nTherefore, the length of the hypotenuse is \\(\\boxed{13}\\).",
+      "extracted_answer": "13",
+      "is_correct": true,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Exact normalized string match",
+      "latency_sec": 11.28
+    },
+    {
+      "index": 4,
+      "id": "omr_cot_3d4381668d7c420b",
+      "problem": "Given the sequence \\(a_{n+1} = \\frac{a_{n-1}}{1+na_{n-1}a_n}\\) with initial conditions \\(a_0 = a_1 = 1\\), find the value of \\(\\frac{1}{a_{199}a_{200}}\\).",
+      "expected_answer": "19901",
+      "model_raw_output": "To solve the given sequence \\(a_{n+1} = \\frac{a_{n-1}}{1+na_{n-1}a_n}\\) with initial conditions \\(a_0 = a_1 = 1\\), we start by examining the recurrence relation. Let's compute the first few terms to identify any patterns.\n\nFor \\(n=0\\):\n\\[a_1 = 1.\\]\n\nFor \\(n=1\\):\n\\[a_2 = \\frac{a_1}{1 + 1 \\cdot a_1 \\cdot a_0} = \\frac{1}{1 + 1 \\cdot 1 \\cdot 1} = \\frac{1}{2}.\\]\n\nFor \\(n=2\\):\n\\[a_3 = \\frac{a_2}{1 + 2 \\cdot a_2 \\cdot a_1} = \\frac{\\frac{1}{2}}{1 + 2 \\cdot \\frac{1}{2} \\cdot 1} = \\frac{\\frac{1}{2}}{1 + 1} = \\frac{\\frac{1}{2}}{2} = \\frac{1}{4}.\\]\n\nFor \\(n=3\\):\n\\[a_4 = \\frac{a_3}{1 + 3 \\cdot a_3 \\cdot a_2} = \\frac{\\frac{1}{4}}{1 + 3 \\cdot \\frac{1}{4} \\cdot \\frac{1}{2}} = \\frac{\\frac{1}{4}}{1 + \\frac{3}{8}} = \\frac{\\frac{1}{4}}{\\frac{8}{8} + \\frac{3}{8}} = \\frac{\\frac{1}{4}}{\\frac{11}{8}} = \\frac{1}{4} \\cdot \\frac{8}{11} = \\frac{2}{11}.\\]\n\nWe observe that the sequence appears to be \\(a_n = \\frac{1}{n(n+1)}\\). To confirm this, we use induction.\n\n**Base Case:** For \\(n=0\\), \\(a_0 = \\frac{1}{0 \\cdot 1} = 1\\), which is true.\nFor \\(n=1\\), \\(a_1 = \\frac{1}{1 \\cdot 2} = \\frac{1}{2}\\), which is true.\n\n**Inductive Step:** Assume \\(a_k = \\frac{1}{k(k+1)}\\) for some \\(k \\geq 1\\). We need to show that \\(a_{k+1} = \\frac{1}{(k+1)(k+2)}\\).\n\nUsing the recurrence relation:\n\\[a_{k+1} = \\frac{a_k}{1 + k \\cdot a_k \\cdot a_{k-1}} = \\frac{\\frac{1}{k(k+1)}}{1 + k \\cdot \\frac{1}{k(k+1)} \\cdot \\frac{1}{k(k+1)}} = \\frac{\\frac{1}{k(k+1)}}{1 + \\frac{1}{k(k+1)}} = \\frac{\\frac{1}{k(k+1)}}{\\frac{k(k+1) + 1}{k(k+1)}} = \\frac{1}{k(k+1) + 1} = \\frac{1}{k^2 + k + 1}.\\]\n\nThus, by induction, \\(a_n = \\frac{1}{n(n+1)}\\) for all \\(n \\geq 1\\).\n\nNow, we need to find \\(\\frac{1}{a_{199}a_{200}}\\):\n\\[a_{199} = \\frac{1}{199 \\cdot 200}, \\quad a_{200} = \\frac{1}{200 \\cdot 201}.\\]\n\\[a_{199}a_{200} = \\frac{1}{199 \\cdot 200} \\cdot \\frac{1}{200 \\cdot 201} = \\frac{1}{199 \\cdot 200 \\cdot 200 \\cdot 201} = \\frac{1}{200^2 \\cdot 201}.\\]\n\\[\\frac{1}{a_{199}a_{200}} = \\frac{200^2 \\cdot 201}{1} = 200^2 \\cdot 201 = 40000 \\cdot 201 = 8040000.\\]\n\nTherefore, the value is \\(\\boxed{8040000}\\).",
+      "extracted_answer": "8040000",
+      "is_correct": false,
+      "is_reliable_auto_compare": true,
+      "comparison_rationale": "Numeric mismatch (8040000.0 != 19901.0)",
+      "latency_sec": 38.26
+    },
+    {
+      "index": 5,
+      "id": "omr_cot_251322c46ee753df",
+      "problem": "Evaluate the integral \\( \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx \\).",
+      "expected_answer": "-\\dfrac{\\pi^2}{8} \\ln 2",
+      "model_raw_output": "To evaluate the integral \\(\\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx\\), we will use integration by parts. Recall the formula for integration by parts: \\(\\int u \\, dv = uv - \\int v \\, du\\).\n\nLet's choose \\(u = \\ln(\\sin(2x))\\) and \\(dv = x \\, dx\\). Then, we need to find \\(du\\) and \\(v\\).\n\nFirst, compute \\(du\\):\n\\[ du = \\frac{d}{dx} \\ln(\\sin(2x)) \\, dx = \\frac{1}{\\sin(2x)} \\cdot 2 \\cos(2x) \\, dx = \\frac{2 \\cos(2x)}{\\sin(2x)} \\, dx = 2 \\cot(2x) \\, dx. \\]\n\nNext, compute \\(v\\):\n\\[ v = \\int x \\, dx = \\frac{x^2}{2}. \\]\n\nNow, apply the integration by parts formula:\n\\[ \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx = \\left[ x \\ln(\\sin(2x)) \\right]_0^{\\frac{\\pi}{2}} - \\int_0^{\\frac{\\pi}{2}} \\frac{x^2}{2} \\cdot 2 \\cot(2x) \\, dx. \\]\n\nEvaluate the first term:\n\\[ \\left[ x \\ln(\\sin(2x)) \\right]_0^{\\frac{\\pi}{2}} = \\left( \\frac{\\pi}{2} \\ln(\\sin(\\pi)) \\right) - \\left( 0 \\ln(\\sin(0)) \\right) = \\frac{\\pi}{2} \\ln(0) - 0 = \\frac{\\pi}{2} \\ln(0) = \\frac{\\pi}{2} \\cdot (-\\infty) = -\\infty. \\]\n\nSo, the integral simplifies to:\n\\[ \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx = -\\frac{\\pi}{2} \\ln(0) + \\frac{1}{2} \\int_0^{\\frac{\\pi}{2}} x^2 \\cot(2x) \\, dx. \\]\n\nSince \\(\\ln(0)\\) is undefined, we need to consider the behavior of the function as \\(x\\) approaches \\(\\frac{\\pi}{2}\\). However, the integral \\(\\int_0^{\\frac{\\pi}{2}} x^2 \\cot(2x) \\, dx\\) is not straightforward to evaluate directly. Instead, we can use the known result for this specific type of integral, which is that the integral of \\(x^2 \\cot(2x)\\) from 0 to \\(\\frac{\\pi}{2}\\) is \\(\\frac{\\pi}{2} \\ln(2)\\).\n\nThus, we have:\n\\[ \\int_0^{\\frac{\\pi}{2}} x^2 \\cot(2x) \\, dx = \\frac{\\pi}{2} \\ln(2). \\]\n\nTherefore, the value of the original integral is:\n\\[ \\int_0^{\\frac{\\pi}{2}} x \\ln(\\sin(2x)) \\, dx = -\\frac{\\pi}{2} \\ln(0) + \\frac{1}{2} \\cdot \\frac{\\pi}{2} \\ln(2) = \\frac{\\pi}{2} \\ln(2) - \\frac{\\pi}{4} \\ln(2) = \\frac{\\pi}{4} \\ln(2). \\]\n\nSo, the final answer is:\n\\[ \\boxed{\\frac{\\pi}{4} \\ln(2)}. \\]",
+      "extracted_answer": "\\frac{\\pi}{4} \\ln(2)",
+      "is_correct": false,
+      "is_reliable_auto_compare": false,
+      "comparison_rationale": "Symbolic expression requires manual review (pred: '\\frac{\\pi}{4} \\ln(2)', exp: '-\\frac{\\pi^2}{8} \\ln 2')",
+      "latency_sec": 27.7
+    }
+  ]
+}

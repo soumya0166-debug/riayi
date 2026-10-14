@@ -1,0 +1,48 @@
+{
+  "id": "run_1791558561092_e80da7",
+  "name": "Qwen2.5-0.5B-Instruct LoRA on OpenMathReasoning Benchmark (Held-Out Evaluated)",
+  "datasetId": "ds_1791558520096_6a837d",
+  "datasetName": "OpenMathReasoning Benchmark (Held-Out Evaluated)",
+  "status": "training_preparation",
+  "hyperparameters": {
+    "baseModel": "Qwen/Qwen2.5-0.5B-Instruct",
+    "epochs": 3,
+    "learningRate": 0.0002,
+    "batchSize": 2,
+    "gradientAccumulationSteps": 4,
+    "loraRank": 16,
+    "loraAlpha": 32,
+    "loraDropout": 0.05,
+    "maxSequenceLength": 1024,
+    "targetModules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "quantization": "4bit",
+    "useGradientCheckpointing": true,
+    "warmupRatio": 0.1,
+    "weightDecay": 0.01
+  },
+  "metrics": {
+    "currentEpoch": 0,
+    "totalEpochs": 3,
+    "currentStep": 0,
+    "totalSteps": 0,
+    "elapsedTimeSec": 0,
+    "progressPct": 0
+  },
+  "lossHistory": [],
+  "artifacts": {
+    "ollamaModelName": "riyai-qwen-lora:e80da7"
+  },
+  "logs": [
+    "[2026-10-09T15:09:21.093Z] Initialized training run \"Qwen2.5-0.5B-Instruct LoRA on OpenMathReasoning Benchmark (Held-Out Evaluated)\". Prepared hyperparameters and model configurations."
+  ],
+  "createdAt": "2026-10-09T15:09:21.093Z",
+  "updatedAt": "2026-10-09T15:09:21.093Z"
+}

@@ -1,0 +1,19 @@
+{
+  "dataset_name": "MontenTech/OpenMathReasoning",
+  "split_name": "cot",
+  "license": "CC-BY-4.0",
+  "author": "MontenTech",
+  "arxiv": "2504.16891",
+  "total_sampled": 350,
+  "split_counts": {
+    "train": 280,
+    "val": 35,
+    "test": 35
+  },
+  "random_seed": 42,
+  "files": {
+    "train": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\RIYAI\\math_training\\data\\train.jsonl",
+    "val": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\RIYAI\\math_training\\data\\val.jsonl",
+    "test": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\RIYAI\\math_training\\data\\test.jsonl"
+  }
+}

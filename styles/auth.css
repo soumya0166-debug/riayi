@@ -1,0 +1,110 @@
+/* RIYAI Authentication System Styles */
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 30%, rgba(0, 210, 180, 0.05), transparent 70%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-floating);
+  animation: fadeIn var(--transition-base);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.auth-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  max-width: 320px;
+}
+
+.auth-notice {
+  background-color: rgba(0, 210, 180, 0.08);
+  border: 1px solid rgba(0, 210, 180, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--riyai-accent);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.4;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-2);
+}
+
+.auth-link {
+  color: var(--riyai-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+  color: var(--riyai-accent-hover);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin: var(--spacing-5) 0;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-subtle);
+}
+
+.oauth-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
